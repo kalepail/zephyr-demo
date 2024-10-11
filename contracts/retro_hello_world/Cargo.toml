@@ -1,0 +1,19 @@
+[package]
+name = "retro-hello-world"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[features]
+mercury = ["dep:retroshade-sdk"]
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+retroshade-sdk = { workspace = true, optional = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }

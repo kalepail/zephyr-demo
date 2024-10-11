@@ -1,0 +1,7 @@
+{
+    "rust-analyzer.cargo.features": ["mercury"],
+    "rust-analyzer.linkedProjects": [
+        "./Cargo.toml",
+        "./zephyr/Cargo.toml",
+    ]
+}

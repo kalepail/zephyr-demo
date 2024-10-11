@@ -1,0 +1,23 @@
+[package]
+name = "zephyr-demo"
+version = "0.0.0"
+edition = "2021"
+
+[workspace]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+zephyr-sdk = "0.2.4"
+serde = { version = "1", features = ["derive"] }
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true

@@ -1,0 +1,10 @@
+name = "zephyr-demo"
+
+[[tables]]
+name = "zd"
+force = false
+
+[[tables.columns]]
+name = "name"
+col_type = "BYTEA"
+primary = true

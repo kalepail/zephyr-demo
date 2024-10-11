@@ -1,0 +1,8 @@
+# Mercury commands
+# https://test.mercurydata.app/
+
+export JWT=???
+mercury-cli --jwt $JWT --local false --mainnet false deploy
+mercury-cli --jwt $JWT --local false --mainnet false catchup --project-name "zephyr-demo" --contracts CAO555SGDJ4TA3CYZ6TRVACQG5O6ROY24PSQZULVGRSJ2A772CFDVGV7
+mercury-cli --jwt $JWT --mainnet false retroshade --project "zephyr-demo" --contracts CC7QSWJPBC2NEFIMBGYBJW6M72NFR6WTULBUAW5K4V26IMHRGU7YD5PU --target BINARY
+curl -X GET https://api.mercurydata.app/catchups/1
